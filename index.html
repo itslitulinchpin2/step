@@ -4,20 +4,55 @@
 <title>WEB1 - html</title>
 <meta charset="utf=8">
 <link rel="stylesheet" href="style.css">
+<script>
+    function nightDayHandler(self){
+        var target=document.querySelector('body').style
+        if(self.value ==='야간모드로'){
+            target.backgroundColor='black';
+            target.color='white';
+            self.value= '주간모드로'
+
+            var alist = document.querySelectorAll('a')
+            var count=0;
+            while(count<alist.length){
+                alist[count].style.color='powderblue';
+                count=count+1
+            }
+            
+        } else {
+            target.backgroundColor='white';
+            target.color='black';
+            self.value= '야간모드로'
+
+            var alist = document.querySelectorAll('a')
+            var count=0;
+            while(count<alist.length){
+                alist[count].style.color='blue';
+                count=count+1
+            }
+        } 
+    }
+</script>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
     <div id="grid">
     <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html">JAVASCRIPT</a></li>
+    <li><a href="1.html">박찬욱</a></li>
+    <li><a href="2.html">하마구치 류스케</a></li>
+    <li><a href="3.html">요르고스 란티모스</a></li>
     </ol>
     <div id="article">
-    <h2>WEB is a WEB!</h2>
+    <h2>이승민이 좋아하는 세 감독들의 최신작을 소개합니다.</h2>
     
-    <p style="margin-top:80px;">C'est bien.</p>
+    <p style="margin-top:20px;">목록에서 감독 이름을 클릭하세요.</p>
 </div>
 </div>
+
+<input id ="night_day" type="button" value="야간모드로"
+    onclick="
+    nightDayHandler(this)
+    ">
 </body>
 </html>
+
