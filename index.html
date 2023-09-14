@@ -4,34 +4,8 @@
 <title>WEB1 - html</title>
 <meta charset="utf=8">
 <link rel="stylesheet" href="style.css">
-<script>
-    function nightDayHandler(self){
-        var target=document.querySelector('body').style
-        if(self.value ==='야간모드로'){
-            target.backgroundColor='black';
-            target.color='white';
-            self.value= '주간모드로'
+<script src ="color.js">
 
-            var alist = document.querySelectorAll('a')
-            var count=0;
-            while(count<alist.length){
-                alist[count].style.color='powderblue';
-                count=count+1
-            }
-            
-        } else {
-            target.backgroundColor='white';
-            target.color='black';
-            self.value= '야간모드로'
-
-            var alist = document.querySelectorAll('a')
-            var count=0;
-            while(count<alist.length){
-                alist[count].style.color='blue';
-                count=count+1
-            }
-        } 
-    }
 </script>
 </head>
 <body>
@@ -53,6 +27,7 @@
     onclick="
     nightDayHandler(this)
     ">
+   
 </body>
 </html>
 
