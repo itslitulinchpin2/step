@@ -1,20 +1,23 @@
 var Links = {
     linksetColor : function(color){
-        var alist = document.querySelectorAll('a')
-        var count=0;
-        while(count<alist.length){
-            alist[count].style.color=color;
-            count=count+1
-        }
+        // var alist = document.querySelectorAll('a')
+        // var count=0;
+        // while(count<alist.length){
+        //     alist[count].style.color=color;
+        //     count=count+1
+        // }
+       $('a').css('color',color)
     }
 }
 
 var Body = {
     bodysetColor : function(color){
-        document.querySelector('body').style.color=color;
+        // document.querySelector('body').style.color=color;
+        $('body').css('color',color)
     },
     setBackgroundColor : function(color){
-        document.querySelector('body').style.backgroundColor=color;
+        // document.querySelector('body').style.backgroundColor=color;
+        $('body').css('backgroundColor',color)
     },
 
 }
